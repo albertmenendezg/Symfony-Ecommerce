@@ -1,0 +1,4 @@
+health_check:
+    path: /health
+    controller: Shared\Infrastructure\Controller\HealthCheckGETController
+    methods: [GET]

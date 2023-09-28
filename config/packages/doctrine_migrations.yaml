@@ -1,4 +1,4 @@
 doctrine_migrations:
     migrations_paths:
-        'DoctrineMigrations': '%kernel.project_dir%/Shared/Infrastructure/Doctrine/Migrations'
+        'Customer\Infrastructure\Doctrine\Migrations': '%kernel.project_dir%/src/Customer/Infrastructure/Doctrine/Migrations'
     enable_profiler: false

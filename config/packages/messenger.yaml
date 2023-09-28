@@ -1,8 +1,6 @@
 framework:
-    messenger:
-        failure_transport: failed
-        transports:
-             async: '%env(MESSENGER_TRANSPORT_DSN)%'
-             failed: 'doctrine://default?queue_name=failed'
-        routing:
-            '*': async
+  messenger:
+    default_bus: command_bus
+    buses:
+      command_bus:
+        default_middleware: allow_no_handlers

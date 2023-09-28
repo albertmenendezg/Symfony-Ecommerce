@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Shared\Domain\Event;
+namespace Shared\Domain\Event;
 
 interface DomainEventPublisher
 {

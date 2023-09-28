@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Shared\Infrastructure\Messenger;
+namespace Shared\Infrastructure\Messenger;
 
-use App\Shared\Domain\Event\DomainEvent;
-use App\Shared\Domain\Event\DomainEventPublisher;
+use Shared\Domain\Event\DomainEvent;
+use Shared\Domain\Event\DomainEventPublisher;
 use Symfony\Component\Messenger\MessageBusInterface;
 
 final class MessengerDomainEventPublisher implements DomainEventPublisher

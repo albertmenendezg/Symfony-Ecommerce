@@ -4,7 +4,13 @@ services:
     _defaults:
         autowire: true
         autoconfigure: true
-    App\:
-        resource: '../src/'
-        exclude:
-            - '../src/Kernel.php'
+    Shared\:
+        resource: '../src/Shared/'
+    Customer\:
+        resource: '../src/Customer/'
+    Payment\:
+        resource: '../src/Payment/'
+    Product\:
+        resource: '../src/Product/'
+    Cart\:
+        resource: '../src/Cart/'

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Shared\Domain\Event;
+namespace Shared\Domain\Event;
 
-use App\Shared\Domain\ValueObject\Uuid;
+use Shared\Domain\ValueObject\UuidValueObject;
 use DateTimeImmutable;
 
 abstract class DomainEvent
@@ -22,7 +22,7 @@ abstract class DomainEvent
     ) {
         $this->aggregateId = $aggregateId;
         $this->data = $data;
-        $this->eventId = $eventId ?? Uuid::random()->__toString();
+        $this->eventId = $eventId ?? UuidValueObject::random()->__toString();
         $this->occurredOn = $occurredOn ?? new DateTimeImmutable();
     }
 

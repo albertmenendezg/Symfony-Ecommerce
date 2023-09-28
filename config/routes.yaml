@@ -1,4 +1,4 @@
-health_check:
-    path: /health
-    controller: App\Shared\Infrastructure\Controller\HealthCheckGETController
-    methods: [GET]
+- { resource: './routes/shared.yaml' }
+- { resource: './routes/customers.yaml' }
+- { resource: './routes/products.yaml' }
+- { resource: './routes/carts.yaml' }
