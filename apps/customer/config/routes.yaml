@@ -1,0 +1,14 @@
+health_check_customers:
+  path: '/customers/health-check'
+  controller: Customer\Infrastructure\Controller\CustomersHealthCheckGETController
+  methods: [ GET ]
+
+create_customer:
+  path: '/customers'
+  controller: Customer\Infrastructure\Controller\CreateCustomerPOSTController
+  methods: [ POST ]
+
+find_customers:
+  path: '/customers'
+  controller: Customer\Infrastructure\Controller\FindCustomersGETController
+  methods: [ GET ]

@@ -1,0 +1,14 @@
+create_product:
+  path: '/products'
+  controller: product\Infrastructure\Controller\CreateProductPOSTController
+  methods: [ POST ]
+
+find_products:
+  path: '/products'
+  controller: product\Infrastructure\Controller\FindProductsGETController
+  methods: [ GET ]
+
+find_product_by_id:
+  path: '/products/{id}'
+  controller: product\Infrastructure\Controller\FindProductByIdGETController
+  methods: [ GET ]

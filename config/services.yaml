@@ -5,12 +5,14 @@ services:
         autowire: true
         autoconfigure: true
     Shared\:
-        resource: '../src/Shared/'
+        resource: '../libs/shared/'
     Customer\:
-        resource: '../src/Customer/'
+        resource: '../apps/customer/src/'
     Payment\:
-        resource: '../src/Payment/'
+        resource: '../apps/payment/src/'
     Product\:
-        resource: '../src/Product/'
+        resource: '../apps/product/src/'
     Cart\:
-        resource: '../src/Cart/'
+        resource: '../apps/cart/src/'
+    User\:
+        resource: '../apps/user/src/'

@@ -1,0 +1,4 @@
+create_cart:
+  path: '/users'
+  controller: user\Infrastructure\Controller\CreateUserPOSTController
+  methods: [ POST ]

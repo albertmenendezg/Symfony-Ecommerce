@@ -1,4 +1,0 @@
-- { resource: './routes/shared.yaml' }
-- { resource: './routes/customers.yaml' }
-- { resource: './routes/products.yaml' }
-- { resource: './routes/carts.yaml' }

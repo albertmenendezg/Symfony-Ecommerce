@@ -1,0 +1,25 @@
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                url: '%env(resolve:DATABASE_URL)%'
+        types:
+            customer_id: Shared\Infrastructure\Doctrine\Mapping\CustomerIdType
+            product_id: Shared\Infrastructure\Doctrine\Mapping\ProductIdType
+            cart_id: Cart\Infrastructure\Doctrine\Mapping\CartIdType
+            cart_item_id: Cart\Infrastructure\Doctrine\Mapping\CartItemIdType
+    orm:
+        auto_generate_proxy_classes: true
+        default_entity_manager: customers_em
+        mappings:
+            Shared\Domain:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/libs/shared/Infrastructure/Doctrine/Mapping'
+                prefix: 'Shared\Domain'
+            Cart\Domain:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/apps/cart/src/Infrastructure/Doctrine/Mapping'
+                prefix: 'Cart\Domain'

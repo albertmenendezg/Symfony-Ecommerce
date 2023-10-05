@@ -1,0 +1,4 @@
+doctrine_migrations:
+    migrations_paths:
+        'Cart\Infrastructure\Doctrine\Migrations': '%kernel.project_dir%/apps/cart/src/Infrastructure/Doctrine/Migrations'
+    enable_profiler: false

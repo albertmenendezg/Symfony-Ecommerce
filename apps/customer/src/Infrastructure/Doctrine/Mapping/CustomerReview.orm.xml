@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                   https://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+    <entity name="Customer\Domain\CustomerReview" table="reviews">
+        <id name="id" column="id" type="customer_review_id"/>
+        <many-to-one field="customer" target-entity="Customer\Domain\Customer">
+            <join-column name="customer_id" referenced-column-name="id" nullable="false"/>
+        </many-to-one>
+        <embedded name="title" class="Customer\Domain\ValueObject\CustomerReviewTitle" use-column-prefix="false"/>
+        <embedded name="description" class="Customer\Domain\ValueObject\CustomerReviewDescription" use-column-prefix="false"/>
+        <embedded name="rating" class="Customer\Domain\ValueObject\CustomerReviewRating" use-column-prefix="false"/>
+    </entity>
+</doctrine-mapping>

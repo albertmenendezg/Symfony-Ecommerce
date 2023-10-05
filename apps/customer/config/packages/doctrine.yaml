@@ -1,0 +1,25 @@
+doctrine:
+    dbal:
+        default_connection: default
+        connections:
+            default:
+                url: '%env(resolve:DATABASE_URL)%'
+        types:
+            customer_id: Shared\Infrastructure\Doctrine\Mapping\CustomerIdType
+            customer_review_id: Customer\Infrastructure\Doctrine\Mapping\CustomerReviewIdType
+            user_id: Shared\Infrastructure\Doctrine\Mapping\UserIdType
+
+    orm:
+        auto_generate_proxy_classes: true
+        default_entity_manager: customers_em
+        mappings:
+            Shared\Domain:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/libs/shared/Infrastructure/Doctrine/Mapping'
+                prefix: 'Shared\Domain'
+            Customer\Domain:
+                is_bundle: false
+                type: xml
+                dir: '%kernel.project_dir%/apps/customer/src/Infrastructure/Doctrine/Mapping'
+                prefix: 'Customer\Domain'
